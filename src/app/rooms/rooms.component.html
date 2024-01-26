@@ -1,0 +1,26 @@
+<!-- Interpolation Technique--> 
+<h3>Welcome to {{HotelName}}</h3>
+
+<div [hidden] ="hideRoom">
+    Number of Rooms:
+<div [innerText]="numberOfRooms"></div>
+
+</div>
+
+{{rooms?.availableRooms ?? 'No rooms'}}
+
+<!-- 
+Number of Rooms:
+<div [innerText]="numberOfRooms"></div>
+-->
+
+<!-- Ng If-->
+<div *ngIf = "rooms.availableRooms > 0">
+    Room List
+</div>
+
+<!-- Event Binding-->
+<button (click)="toggle()">Toggle</button>
+
+
+
